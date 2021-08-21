@@ -6,13 +6,23 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
+
 </head>
 <body>
-    <div>
-        <button value="rock">rock</button>
-        <button value="paper">paper</button>
-        <button value="scissors">scissors</button>
+    <div class="container">
+        <div class="btns">
+            <button class="btn btn-warning" value="rock">rock</button>
+            <button class="btn btn-danger" value="paper">paper</button>
+            <button class="btn btn-info" value="scissors">scissors</button>
+        </div>
+    
+        <div class="result">
+            <p class="result_para"></p>
+            <p class="score_para"></p>
+            <p class="end_para"></p>
+        </div>
     </div>
+    
     <script src="scripts/main.js"></script>
 </body>
 </html>

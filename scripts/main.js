@@ -66,9 +66,11 @@ function round(){
 
     }
 
-    console.log(`you: ${userSelection}`)
-    console.log(`computer: ${computerSelection}`)
-    console.log(result)
+
+    const result_para = document.querySelector('.result_para');
+    result_para.innerHTML = `you: ${userSelection} : computer: ${computerSelection} <br>
+    ${result}`;
+
     play(result);
 
 }
@@ -88,13 +90,16 @@ function play(result){
         playerSCore++;
         computerScore++;
     }
+    
+    const score_para = document.querySelector('.score_para');
+    score_para.textContent = `playerSCore: ${playerSCore} - computerScore: ${computerScore}`;
 
-    console.log(`playerSCore: ${playerSCore} - computerScore: ${computerScore}`)
+    const end_para = document.querySelector('.end_para')
 
     if(playerSCore === 5){
-        console.log(`Game Over => YOU WIN`)
+       end_para.textContent = `Game Over => YOU WIN`
     }else if(computerScore === 5){
-        console.log(`Game Over => YOU LOST`)
+        end_para.textContent = `Game Over => YOU LOST`
     }
 
     if(playerSCore === 5 || computerScore === 5){
